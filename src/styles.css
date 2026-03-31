@@ -1,0 +1,107 @@
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #f7fafc;
+  background: #0f172a;
+}
+
+* { box-sizing: border-box; }
+body, html, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+
+.menu-shell {
+  height: 100%;
+  padding: 28px;
+  background: radial-gradient(circle at top, #1e293b, #020617 70%);
+}
+
+h1 { margin: 0; font-size: 3rem; }
+.subtitle { margin-top: 6px; color: #93c5fd; }
+
+.track-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.track-card {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #0b1223;
+  color: #e2e8f0;
+  text-align: left;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.track-card:hover { border-color: #60a5fa; transform: translateY(-1px); }
+
+.race-root { width: 100%; height: 100%; position: relative; }
+
+.hud-timer {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(2, 6, 23, 0.8);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.hud-speed {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(2, 6, 23, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.hint-bar {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(2, 6, 23, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.55);
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  width: min(500px, 90vw);
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.modal.wide { width: min(700px, 96vw); }
+
+button, input {
+  font: inherit;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  padding: 8px 10px;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+button { cursor: pointer; }
+button:hover { border-color: #60a5fa; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #334155; text-align: left; padding: 8px; }
+
+.input-wrap { display: flex; flex-direction: column; gap: 6px; }
